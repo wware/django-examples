@@ -5,6 +5,19 @@ Since my profession now seems to be "Django guy", I might as well
 maintain a little collection of Django examples, branching off from
 the `standard tutorial`_.
 
+Heroku
+------
+
+I'm going to run this stuff on Heroku just for convenience. It works and it's free.
+I'd need to do some research if I were trying to deploy something seriously.
+
+Django uses PostgreSQL. When I'm just messing around on the Macbook, I use SQLite.
+
+The deployment command ``git push heroku master`` did not create or sync my PostgreSQL
+database. But I found there is a Python shell command that can do the job::
+
+    $ heroku run python manage.py syncdb
+
 Trouble with the tutorial
 -------------------------
 

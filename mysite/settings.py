@@ -1,5 +1,10 @@
 # Django settings for mysite project.
 
+# Are we running on my Macbook or on Heroku? SQLite on the Macbook,
+# PostgresQL on Heroku
+import os
+RUNNING_LOCAL = 'wware' in os.environ['HOME']
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -8,13 +13,6 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3'
-    }
-}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -148,3 +146,34 @@ LOGGING = {
         },
     }
 }
+
+if RUNNING_LOCAL:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3'
+        }
+    }
+else:
+    # https://devcenter.heroku.com/articles/getting-started-with-django#django-settings
+    # Parse database configuration from $DATABASE_URL
+    import dj_database_url
+    DATABASES = {
+        'default': dj_database_url.config()
+        # could I have other options in here? how would I choose them?
+    }
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+# Static asset configuration
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
