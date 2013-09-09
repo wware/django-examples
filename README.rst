@@ -5,6 +5,8 @@ Since my profession now seems to be "Django guy", I might as well
 maintain a little collection of Django examples, branching off from
 the `standard tutorial`_.
 
+.. _`standard tutorial`: https://docs.djangoproject.com/en/1.5/intro/tutorial01/
+
 Heroku
 ------
 
@@ -28,6 +30,8 @@ only a little digging to try to understand what's happening::
 
  Reverse for ''detail'' with arguments '(1,)' and keyword arguments '{}' not found.
 
+.. _`Removing hardcoded URLs in templates`: https://docs.djangoproject.com/en/1.5/intro/tutorial03/#removing-hardcoded-urls-in-templates
+
 So I did a little digging, and in ``venv/lib/python2.7/site-packages/django/template/defaulttags.py``
 I found ``URLNode.render`` which has this::
 
@@ -48,21 +52,73 @@ by saying this in ``mysite.settings``::
     SETTINGS_MODULE = polls.settings
 
 things don't go too much better. Yes, I get ``project_name`` saying "polls", but then
-``polls`` hasn't been imported when we need it for the ``reverse`` call. It looks like,
-if it did actually work, I would need this instead of what's shown in the tutorial::
-
-    <li><a href="{% url 'views.detail' poll.id %}">{{ poll.question }}</a></li>
-
-Since this removal of hardcoded URLs appears to be a matter of taste, useful for
+``polls`` hasn't been imported when we need it for the ``reverse`` call. Since this
+removal of hardcoded URLs appears to be a matter of taste, useful for
 very large websites but unnecessary for small ones, I will defer further investigation
 to another time.
 
 Other stuff I'd like to do
---------------------------
+==========================
 
-There is a bunch of Django stuff for optimizing SQL queries involving
-``select_related``, ``prefetch_related``, ``only``, and ``exclude``,
-and those would be good to learn more about.
+Priority queue
+--------------
 
-.. _`standard tutorial`: https://docs.djangoproject.com/en/1.5/intro/tutorial01/
-.. _`Removing hardcoded URLs in templates`:https://docs.djangoproject.com/en/1.5/intro/tutorial03/#removing-hardcoded-urls-in-templates
+A to-do list should really be a `priority queue`_. If it's maintained online, accessible
+to phone or tablet or Macbook, that's a handy thing. Python has a  `heap queue`_ module
+designed for priority queues. I don't think that will be necessary for this purpose since
+my to-do list might never have more than 100 items, and I might redefine priorities from
+time to time. I might have a few different characteristics, which make it possible to sort
+in a number of different ways.
+
+In any event one of the apps should be a priority queue, however it is implemented.
+
+.. _`priority queue`: http://en.wikipedia.org/wiki/Priority_queue
+.. _`heap queue`: http://docs.python.org/2/library/heapq.html
+
+Responsive web design
+---------------------
+
+I want to learn this stuff so I can make websites that work well on phones, tablets, and
+laptops.
+
+APIs of the Rich and Famous
+---------------------------
+
+* https://developers.google.com/drive/examples/python DrEdit, an example usage of the Google Drive API
+* https://developers.google.com/events/io/sessions/351310959 The Freebase APIs: Tapping into Google's Knowledge Graph
+* https://developers.google.com/maps/ Google Maps API
+
+Database cleverness
+-------------------
+
+There is a bunch of Django stuff for optimizing SQL queries involving ``select_related``,
+``prefetch_related``, ``only``, and ``exclude``, and those would be good to learn more
+about. So database stuff, joins, prefetching, etc., all the `QuerySet API`_ stuff in Django.
+
+.. _`QuerySet API`: https://docs.djangoproject.com/en/1.5/ref/models/querysets/
+
+PayPal and e-commerce
+---------------------
+
+PayPal maintains a `sandbox`_ for debugging your application, and I should use the
+`REST APIs`_ to work with the sandbox.
+
+.. _`sandbox`: https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_testing_SBOverview
+.. _`REST APIs`: https://developer.paypal.com/webapps/developer/docs/api/
+
+There are some pre-existing e-commerce solutions for Django, such as `Satchmo`_ and `LFS`_
+which are both open-source. There is also `Beginning Django E-Commerce`_, a book on Amazon
+with 4.5 stars and an affordable Kindle edition.
+
+.. _`Beginning Django E-Commerce`: http://www.amazon.com/Beginning-Django-E-Commerce-Experts-Development/dp/1430225351/
+.. _`Satchmo`: http://www.satchmoproject.com/
+.. _`LFS`: http://www.getlfs.com/
+
+I should build a simple fake webstore with a shopping cart and a PayPal payment system,
+using the sandbox. It should be trivially easy to flip a switch to make it a real webstore.
+Obviously flipping the switch would include replacing fake products with real products.
+
+Try to think through how you'll handle orders and fulfillment. There is a customer-facing
+piece and a merchant-facing piece, and the merchant-facing piece should help the merchant
+in getting stuff to customers in a timely fashion, and keeping track of any inventory.
+

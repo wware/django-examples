@@ -100,10 +100,15 @@ ROOT_URLCONF = 'mysite.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+HERE = os.popen('pwd').read().strip()
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join('HERE', 'hello/templates'),
+    os.path.join('HERE', 'polls/templates'),
+    os.path.join('HERE', 'pqueue/templates'),
 )
 
 INSTALLED_APPS = (
@@ -115,7 +120,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'polls'
+    'polls',
+    'hello',
+    'pqueue',
 )
 
 # A sample logging configuration. The only tangible logging

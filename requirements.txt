@@ -3,3 +3,5 @@ django-toolbelt
 nose
 mock
 flake8==2.0
+docutils
+docopt
