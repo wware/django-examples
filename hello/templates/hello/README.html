@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7514 2012-09-14 14:27:12Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="section" id="django-examples">
+<h1>Django examples</h1>
+<p>Since my profession now seems to be &quot;Django guy&quot;, I might as well
+maintain a little collection of Django examples, branching off from
+the <a class="reference external" href="https://docs.djangoproject.com/en/1.5/intro/tutorial01/">standard tutorial</a>.</p>
+<div class="section" id="heroku">
+<h2>Heroku</h2>
+<p>I'm going to run this stuff on Heroku just for convenience. It works and it's free.
+I'd need to do some research if I were trying to deploy something seriously.</p>
+<p>Django uses PostgreSQL. When I'm just messing around on the Macbook, I use SQLite.</p>
+<p>The deployment command <tt class="docutils literal">git push heroku master</tt> did not create or sync my PostgreSQL
+database. But I found there is a Python shell command that can do the job:</p>
+<pre class="literal-block">
+$ heroku run python manage.py syncdb
+</pre>
+</div>
+<div class="section" id="trouble-with-the-tutorial">
+<h2>Trouble with the tutorial</h2>
+<p>One thing in the standard tutorial that didn't work for me is the
+section on <a class="reference external" href="https://docs.djangoproject.com/en/1.5/intro/tutorial03/#removing-hardcoded-urls-in-templates">Removing hardcoded URLs in templates</a> in the third part
+of the tutorial. I got the following error when I tried it, and have done
+only a little digging to try to understand what's happening:</p>
+<pre class="literal-block">
+Reverse for ''detail'' with arguments '(1,)' and keyword arguments '{}' not found.
+</pre>
+<p>So I did a little digging, and in <tt class="docutils literal"><span class="pre">venv/lib/python2.7/site-packages/django/template/defaulttags.py</span></tt>
+I found <tt class="docutils literal">URLNode.render</tt> which has this:</p>
+<pre class="literal-block">
+try:
+    url = reverse(project_name + '.' + view_name,
+              args=args, kwargs=kwargs,
+              current_app=context.current_app)
+except NoReverseMatch:
+    if self.asvar is None:
+        # Re-raise the original exception, not the one with
+        # the path relative to the project. This makes a
+        # better error message.
+        raise e
+</pre>
+<p>And <tt class="docutils literal">project_name</tt> says &quot;mysite&quot; instead of &quot;polls&quot;. If I try to force the matter
+by saying this in <tt class="docutils literal">mysite.settings</tt>:</p>
+<pre class="literal-block">
+SETTINGS_MODULE = polls.settings
+</pre>
+<p>things don't go too much better. Yes, I get <tt class="docutils literal">project_name</tt> saying &quot;polls&quot;, but then
+<tt class="docutils literal">polls</tt> hasn't been imported when we need it for the <tt class="docutils literal">reverse</tt> call. Since this
+removal of hardcoded URLs appears to be a matter of taste, useful for
+very large websites but unnecessary for small ones, I will defer further investigation
+to another time.</p>
+</div>
+</div>
+<div class="section" id="other-stuff-i-d-like-to-do">
+<h1>Other stuff I'd like to do</h1>
+<div class="section" id="priority-queue">
+<h2>Priority queue</h2>
+<p>A to-do list should really be a <a class="reference external" href="http://en.wikipedia.org/wiki/Priority_queue">priority queue</a>. If it's maintained online, accessible
+to phone or tablet or Macbook, that's a handy thing. Python has a  <a class="reference external" href="http://docs.python.org/2/library/heapq.html">heap queue</a> module
+designed for priority queues. I don't think that will be necessary for this purpose since
+my to-do list might never have more than 100 items, and I might redefine priorities from
+time to time. I might have a few different characteristics, which make it possible to sort
+in a number of different ways.</p>
+<p>In any event one of the apps should be a priority queue, however it is implemented.</p>
+</div>
+<div class="section" id="responsive-web-design">
+<h2>Responsive web design</h2>
+<p>I want to learn this stuff so I can make websites that work well on phones, tablets, and
+laptops.</p>
+</div>
+<div class="section" id="apis-of-the-rich-and-famous">
+<h2>APIs of the Rich and Famous</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developers.google.com/drive/examples/python">https://developers.google.com/drive/examples/python</a> DrEdit, an example usage of the Google Drive API</li>
+<li><a class="reference external" href="https://developers.google.com/events/io/sessions/351310959">https://developers.google.com/events/io/sessions/351310959</a> The Freebase APIs: Tapping into Google's Knowledge Graph</li>
+<li><a class="reference external" href="https://developers.google.com/maps/">https://developers.google.com/maps/</a> Google Maps API</li>
+</ul>
+</div>
+<div class="section" id="database-cleverness">
+<h2>Database cleverness</h2>
+<p>There is a bunch of Django stuff for optimizing SQL queries involving <tt class="docutils literal">select_related</tt>,
+<tt class="docutils literal">prefetch_related</tt>, <tt class="docutils literal">only</tt>, and <tt class="docutils literal">exclude</tt>, and those would be good to learn more
+about. So database stuff, joins, prefetching, etc., all the <a class="reference external" href="https://docs.djangoproject.com/en/1.5/ref/models/querysets/">QuerySet API</a> stuff in Django.</p>
+</div>
+<div class="section" id="paypal-and-e-commerce">
+<h2>PayPal and e-commerce</h2>
+<p>PayPal maintains a <a class="reference external" href="https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&amp;content_ID=developer/e_howto_testing_SBOverview">sandbox</a> for debugging your application, and I should use the
+<a class="reference external" href="https://developer.paypal.com/webapps/developer/docs/api/">REST APIs</a> to work with the sandbox.</p>
+<p>There are some pre-existing e-commerce solutions for Django, such as <a class="reference external" href="http://www.satchmoproject.com/">Satchmo</a> and <a class="reference external" href="http://www.getlfs.com/">LFS</a>
+which are both open-source.&nbsp;There is also <a class="reference external" href="http://www.amazon.com/Beginning-Django-E-Commerce-Experts-Development/dp/1430225351/">Beginning Django E-Commerce</a>, a book on Amazon
+with 4.5 stars and an affordable Kindle edition.</p>
+<p>I should build a simple fake webstore with a shopping cart and a PayPal payment system,
+using the sandbox. It should be trivially easy to flip a switch to make it a real webstore.
+Obviously flipping the switch would include replacing fake products with real products.</p>
+<p>Try to think through how you'll handle orders and fulfillment. There is a customer-facing
+piece and a merchant-facing piece, and the merchant-facing piece should help the merchant
+in getting stuff to customers in a timely fashion, and keeping track of any inventory.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
