@@ -1,0 +1,46 @@
+<html>
+<head>
+<!-- The Galaxy S3 is detected by max-device-width:360px.
+  -- The Nexus 10 is detected by max-device-width:800px.
+  -->
+<meta name="viewport" content="width=device-width">
+<script src="/static/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+var handleResize = function() {
+    var device;
+    var width = $(window).width();
+    if (width > 800) {
+        device = 'a desktop or laptop';
+        $('.first').css('font-size', '1em').css('color', 'black');
+        $('.second').css('font-size', '1em').css('background-color', 'white');
+    }
+    else if (width > 360) {
+        device = 'a Nexus 10 tablet';
+        $('.first').css('font-size', '1em').css('color', 'black');
+        $('.second').css('font-size', '2em').css('background-color', 'yellow');
+    }
+    else {
+        device = 'a Galaxy S3 phone';
+        $('.first').css('font-size', '2em').css('color', 'red');
+        $('.second').css('font-size', '2em').css('background-color', 'yellow');
+    }
+    $('#deviceType').text('I think you might be using ' + device + ' because width = ' + width + '.');
+}
+$(document).ready(handleResize);
+$(window).resize(handleResize);
+</script>
+</head>
+
+<body>
+    <div class="first">
+        This is going to be <a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web</a>
+        stuff, which should look good on desktop, tablet, and phone. To make Chrome super-narrow, use the second answer
+        to <a href="http://stackoverflow.com/questions/8681903/browser-doesnt-scale-below-400px">this Stackoverflow question</a>.
+    </div>
+    <div class="second">
+        Here is a second paragraph. Media queries work in both <a href="http://www.w3.org/TR/css3-mediaqueries/">CSS</a> and
+        <a href="http://www.quirksmode.org/blog/archives/2010/08/combining_media.html">JavaScript</a>.
+    </div>
+    <div id="deviceType"></div>
+</body>
+</html>

@@ -106,9 +106,10 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join('HERE', 'hello/templates'),
-    os.path.join('HERE', 'polls/templates'),
-    os.path.join('HERE', 'pqueue/templates'),
+    os.path.join(HERE, 'hello/templates'),
+    os.path.join(HERE, 'polls/templates'),
+    os.path.join(HERE, 'pqueue/templates'),
+    os.path.join(HERE, 'responsive/templates'),
 )
 
 INSTALLED_APPS = (
