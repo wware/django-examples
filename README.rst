@@ -20,6 +20,14 @@ database. But I found there is a Python shell command that can do the job::
 
     $ heroku run python manage.py syncdb
 
+Some info about Python, Django, Gunicorn, and Heroku all playing together...
+
+* https://devcenter.heroku.com/articles/getting-started-with-python
+* https://devcenter.heroku.com/articles/getting-started-with-django
+* https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/gunicorn/#running-django-in-gunicorn-as-a-generic-wsgi-application
+* http://docs.gunicorn.org/en/latest/run.html
+* http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/
+
 Trouble with the tutorial
 -------------------------
 

@@ -107,6 +107,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(HERE, 'hello/templates'),
+    os.path.join(HERE, 'html5offline/templates'),
     os.path.join(HERE, 'polls/templates'),
     os.path.join(HERE, 'pqueue/templates'),
     os.path.join(HERE, 'responsive/templates'),
@@ -121,9 +122,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'tastypie',
     'polls',
     'hello',
     'pqueue',
+    'html5offline',
 )
 
 # A sample logging configuration. The only tangible logging

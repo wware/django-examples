@@ -11,5 +11,6 @@ urlpatterns = patterns(
     url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^responsive/', include('responsive.urls', namespace='responsive')),
     url(r'^pqueue/', include('pqueue.urls', namespace='pqueue')),
+    url(r'^html5offline/', include('html5offline.urls', namespace='html5offline')),
     url(r'^admin/', include(admin.site.urls)),
 )

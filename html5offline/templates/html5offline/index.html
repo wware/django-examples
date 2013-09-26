@@ -1,0 +1,33 @@
+<!-- html ng-app manifest="appcache" -->
+<html ng-app>
+    <head>
+        <script src="/static/jquery-2.0.3.min.js"></script>
+        <script src="/static/angular.min.js"></script>
+        <script src="/static/html5offline.js"></script>
+    </head>
+    <body>
+        {% verbatim %}
+        <div ng-controller="OfflineCtrl">
+            <h1>Foo</h1>
+            <div>
+                <input ng-model="newKey" placeholder="key"/>
+                <input ng-model="newValue" placeholder="value"/>
+                <button ng-click="addPair()">
+                    Add key, value pair
+                </button>
+            </div>
+            <div>
+                <button ng-click="getPairs()">
+                    Refresh
+                </button>
+                <ul>
+                    <li ng-repeat="item in items">
+                        <b>{{ item.key }}</b>
+                        <i>{{ item.value }}</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endverbatim %}
+    </body>
+</html>
