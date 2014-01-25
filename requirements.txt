@@ -4,6 +4,7 @@ django-tastypie
 mimeparse
 nose
 mock
-flake8==2.0
+flake8
 docutils
 docopt
+PyLD

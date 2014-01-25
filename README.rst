@@ -130,3 +130,21 @@ Try to think through how you'll handle orders and fulfillment. There is a custom
 piece and a merchant-facing piece, and the merchant-facing piece should help the merchant
 in getting stuff to customers in a timely fashion, and keeping track of any inventory.
 
+Minor diversion: automation of science
+--------------------------------------
+
+Here are some papers by `Ross D. King`_, the Adam robot scientist guy.
+
+.. _`Ross D. King`: http://en.wikipedia.org/wiki/Ross_D._King
+
+* http://ceur-ws.org/Vol-611/paper10.pdf
+* http://www.biomedcentral.com/content/pdf/1471-2105-9-97.pdf
+* http://www.bioontology.org/sites/default/files/on%20the%20fomalization%20and%20reuse.pdf
+* http://commonsenseatheism.com/wp-content/uploads/2011/02/King-The-Automation-of-Science.pdf
+
+The guy is very much aligned with my own thinking about this stuff, but of course his thoughts are
+vastly more detailed because he's actually built the machine, made it do science, and published
+papers as a result.  Regrettably, he appears to be working in nearly complete obscurity.
+
+My hope is that PyLD will make it possible and/or easy to build semantic web services that help with
+the automation of science.
